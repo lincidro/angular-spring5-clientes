@@ -8,12 +8,12 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     DirectivaComponent,
-      ClientesComponent
+    ClientesComponent
    ],
   imports: [
     BrowserModule
