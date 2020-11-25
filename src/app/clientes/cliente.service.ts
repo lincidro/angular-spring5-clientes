@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { of, Observable } from 'rxjs';
 import { CLIENTES } from './clientes.json';
+import { Cliente } from './cliente';
 
 // Provided in root, permite que sin registrar en appmodule podamos usar el Service
 @Injectable({
@@ -7,9 +9,10 @@ import { CLIENTES } from './clientes.json';
 })
 export class ClienteService {
 
-constructor() { }
+  constructor() { }
 
-getClientes() {
-  return CLIENTES;
-}
+  getClientes(): Observable<Cliente[]> {
+    return of(CLIENTES);
+  }
+
 }
